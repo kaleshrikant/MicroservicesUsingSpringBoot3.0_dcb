@@ -29,10 +29,10 @@ public class EmployeeController {
         return employeeRepository.findAll();
     }
 
-    @GetMapping("/{id}")
-    public Employee findById(@PathVariable Long id) {
+    @GetMapping("/department/{departmentId}")
+    public Employee findById(@PathVariable("departmentId") Long departmentId) {
         log.info("Employee findById");
-        return employeeRepository.findById(id);
+        return employeeRepository.findById(departmentId);
     }
 
 }
